@@ -1,5 +1,5 @@
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -47,7 +47,7 @@ Variables
   --fixed-width: 620px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -137,7 +137,7 @@ p {
 }
 
 /*
-=============== 
+===============
 Menu
 ===============
 */
@@ -158,9 +158,19 @@ Menu
 }
 .btn-container {
   margin-bottom: 4rem;
-  display: flex;
+  display: grid;
   justify-content: center;
 }
+
+@media screen and (min-width: 575px) {
+	.btn-container {
+		margin-bottom: 4rem;
+		display: flex;
+		justify-content: center;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
 .filter-btn {
   background: transparent;
   border-color: transparent;
