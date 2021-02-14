@@ -62,7 +62,7 @@ const menu = [
     category: 'kalimalteadas',
     price: '5.500',
     img: './images/malteada-frutos-rojos.jpeg',
-    desc: `Deleitable malteada de frutos rojos para matar matar el antojo`,
+    desc: `Deleitable malteada de frutos rojos para matar el antojo`,
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const menu = [
     category: 'kalimalteadas',
     price: '5.500',
     img: './images/malteada-guanabana.jpg',
-    desc: `Deleitable malteada de guanabana para matar matar el antojo`,
+    desc: `Deleitable malteada de guanabana para matar el antojo`,
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const menu = [
     category: 'kalimalteadas',
     price: '5.500',
     img: './images/malteada-cafe.jpg',
-    desc: `Deleitable malteada de cafe con arequipe para matar matar el antojo`,
+    desc: `Deleitable malteada de cafe con arequipe para matar el antojo`,
   },
   {
     id: 10,
@@ -86,7 +86,7 @@ const menu = [
     category: 'kalimalteadas',
     price: '5.500',
     img: './images/malteada-chocolate.jpg',
-    desc: `Deleitable malteada de chocolate para matar matar el antojo`,
+    desc: `Deleitable malteada de chocolate para matar el antojo`,
   },
 ];
 export default menu;
