@@ -5,8 +5,8 @@ const menu = [
     category: 'comidas',
     price: '8.000',
     img: './images/burrito.jpg',
-    desc: `Enorme burrito que parece caballo! Consiste de una\
-            tortilla de arina de trigo rellenada con carne, \
+    desc: `Enorme burrito que parece un caballo! Consiste de una\
+            tortilla de harina de trigo rellenada con carne asada, \
             chorizo, queso, pico de gallo, arroz con granos y\
             salsa tartara.`,
   },
@@ -24,10 +24,10 @@ const menu = [
     id: 3,
     title: 'alitas de pollo',
     category: 'comidas',
-    price: '8.500',
+    price: '10.000',
     img: './images/alitas.jpg',
-    desc: `Jugosas alitas de pollo con ese sabor unico. Puede pedirlas\
-            de salsa barbacue, salsa honey garlic, o salsa buffalo, o \
+    desc: `Jugosas alitas de pollo con un sabor unico. Puede pedirlas\
+            de salsa barbacoa, salsa honey garlic, salsa buffalo, o \
             normales`,
   },
 //   {
@@ -45,8 +45,8 @@ const menu = [
     category: 'postres',
     price: '4.000',
     img: './images/brownie.jpg',
-    desc: `Un riquisimo postre para chuparse los dedos,\
-            disfrutalo sol@ o compartirlo`,
+    desc: `Un riquisimo postre para matar el antojo,\
+            disfrutalo sol@ o compartelo`,
   },
   {
     id: 6,
@@ -54,7 +54,8 @@ const menu = [
     category: 'aperitivos',
     price: '4,000',
     img: './images/pancitos.jpg',
-    desc: `Pancitos de ajo cubiertos con queso mozzarella para satisfacer tus`,
+    desc: `Pancitos de ajo cubiertos con queso mozzarella para alegrar\
+			el estomago.`,
   },
   {
     id: 7,
