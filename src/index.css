@@ -218,7 +218,7 @@ Menu
   margin-bottom: 0.5rem;
 }
 .price {
-  color: var(--clr-primary-1);
+  color: var(--clr-green-dark);
 }
 .item-text {
   margin-bottom: 0;
@@ -243,4 +243,19 @@ Menu
   .photo {
     height: 150px;
   }
+}
+
+.prev-btn,
+.next-btn {
+  color: var(--clr-primary-7);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--clr-primary-5);
 }
