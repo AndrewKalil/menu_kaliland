@@ -13,36 +13,27 @@ const Footer = () => {
                 <div className="row">
                 <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
                     <h5 className="text-uppercase">Contactanos</h5>
-                    {/* <ul className="list-unstyled mb-0">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul> */}
                     <ul className="list-unstyled mb-0">
                         {numeros.map((numero, index) => {
                             const {name, number} = numero
                             return (
-                                <li><a className='text-dark' href={`https://api.whatsapp.com/send?phone=${number}`}>contacta a {name}</a></li>
+                                <li key={index}><a className='text-dark' href={`https://api.whatsapp.com/send?phone=${number}`}>contacta a {name}</a></li>
                             )
                         })}
                     </ul>
                 </div>
                 <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 className="text-uppercase">Footer text</h5>
-
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
-                    </p>
+                <h5 className="text-uppercase">Formas de pago</h5>
+                    <ul className="list-unstyled mb-0">
+                        <li className='text-dark'>Nequi: 3137936776</li>
+                        <li className='text-dark'>A la entrega</li>
+                    </ul>
                 </div>
                 </div>
             </div>
 
             <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-                © 2020 Copyright:
-                <a className="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                © 2021 Copyright: Kaliland
             </div>
         </footer>
     )
