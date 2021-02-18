@@ -5,7 +5,7 @@ const Footer = () => {
         {name: "Andrew", number: "+573137936776"},
         {name: "Luis", number: "+573008825415"},
         {name: "Andy", number: "+573022955334"},
-        {name: "juan", number: "+573116010528"}
+        {name: "Juan", number: "+573116010528"}
     ]
     return (
         <footer className="footer text-center text-lg-start">
