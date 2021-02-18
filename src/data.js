@@ -28,7 +28,7 @@ const menu = [
         img: './images/alitas.jpg',
         desc: `Jugosas alitas de pollo con un sabor unico. Puede pedirlas\
                 de salsa barbacoa, salsa honey garlic, salsa buffalo, o \
-                normales`,
+                normales.`,
     },
     // {
     //     id: 4,
@@ -46,7 +46,7 @@ const menu = [
         price: '4.000',
         img: './images/brownie.jpg',
         desc: `Un riquisimo postre para matar el antojo,\
-        disfrutalo sol@ o compartelo`,
+        disfrutalo sol@ o compartelo.`,
     },
     {
         id: 6,
@@ -112,7 +112,7 @@ const menu = [
                 (salchicha ranchera, cebolla, pimenton, maiz). Tambien puedes agregar\
                 adicionales: cualquier vegetal (1.000 COP), cualquier carne (2,000 COP),\
                 borde de queso (2.000 COP), borde de bocadillo (2.000 COP), picadillo de\
-                cilantro, cebollin y lechuga (1.000 COP)`
+                cilantro, cebollin y lechuga (1.000 COP).`
     },
 
     ];
