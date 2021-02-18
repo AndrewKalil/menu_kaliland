@@ -52,7 +52,7 @@ const menu = [
         id: 6,
         title: 'pancitos de queso',
         category: 'aperitivos',
-        price: '4,000',
+        price: '4.000',
         img: './images/pancitos.jpg',
         desc: `Pancitos de ajo cubiertos con queso mozzarella para alegrar\
         el estomago.`,
@@ -63,7 +63,7 @@ const menu = [
         category: 'aperitivos',
         price: '3.000',
         img: './images/cynnamon_roles.jpg',
-        desc: `Delicioso pan de canela. Frescos a la entrega!`,
+        desc: `Delicioso pan de canela. Frescos y calintitos a la entrega!`,
     },
     {
         id: 8,
@@ -83,7 +83,12 @@ const menu = [
         id: 12,
         title: 'pizza',
         category: 'comidas',
-        img: './images/pizza_jamon_pollo_pina.jpg',
+        img: [
+            './images/pizza_jamon_pollo_pina.jpg',
+            './images/pizza.jpg',
+            './images/pizza_mais_con_salchicha_ranchera.jpg',
+            './images/pizza_con_lechuga_maiz_jamon.jpg'
+        ],
         tipos: [
             {name: 'Pizza de jamon y queso', price: "13.000"},
             {name: 'Pizza de salami y queso', price: "13.000"},

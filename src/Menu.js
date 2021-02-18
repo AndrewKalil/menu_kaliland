@@ -12,10 +12,11 @@ const Menu = ({items}) => {
                     const {tipos} = menuItem
                     return(
                         <article key={id} className="menu-item">
-                            <img src={img} alt={title} className='photo'/>
-                            <div className="item-info">
-                                <Pizza tipos={tipos} desc={desc}/>
-                            </div>
+                            <Pizza
+                                tipos={tipos}
+                                desc={desc}
+                                price={price}
+                                img={img}/>
                         </article>
                     )
 

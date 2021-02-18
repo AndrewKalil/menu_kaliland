@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
+import Footer from './Footer'
+// import {Footer} from 'bootstrap'
 
 const allCategories = ['todos', ...new Set(items.map((item) => item.category))]
 
@@ -29,6 +31,7 @@ function App() {
                             filterItems={filterItems}/>
                 <Menu items={menuItems}/>
             </section>
+            <Footer/>
         </main>
     )
 }
