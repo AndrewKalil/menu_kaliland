@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 
-const Malteadas = ({tipos, desc, price}) => {
+const Malteadas = ({tipos, desc, price, title}) => {
 	const [index, setIndex] = useState(0)
 	const {name, img} = tipos[index]
 
@@ -33,18 +33,19 @@ const Malteadas = ({tipos, desc, price}) => {
 		<>
             <img src={img} alt={name} className='photo'/>
             <div className="item-info">
+                <h4>{title}</h4>
                 <header>
-                    <button
+                    {tipos && <button
                         className="prev-btn"
                         onClick={prevItem}>
                         <FaChevronLeft/>
-                    </button>
+                    </button>}
                     <h4>{name}</h4>
-                    <button
+                    {tipos && <button
                         className="next-btn"
                         onClick={nextItem}>
                         <FaChevronRight/>
-                    </button>
+                    </button>}
                     <h4 className='price'>{price}</h4>
                 </header>
                 <p className='item-text'>{desc}</p>

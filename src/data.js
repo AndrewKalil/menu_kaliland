@@ -4,9 +4,13 @@ const menu = [
         title: 'Burricaballo',
         category: 'comidas',
         price: '8.000',
-        img: './images/burrito.jpg',
+        img: [
+            './images/burrito.jpg',
+            './images/burrito_2.jpg',
+            './images/burrito_3.jpg'
+        ],
         desc: `Enorme burrito que parece un caballo! Consiste de una\
-                tortilla de harina de trigo rellenada con carne asada, \
+                tortilla de harina de trigo rellenada con codillo de cerdo, \
                 chorizo, queso, pico de gallo, arroz con granos y\
                 salsa tartara.`,
     },
@@ -15,7 +19,7 @@ const menu = [
         title: 'Hamburguesa de pollo',
         category: 'comidas',
         price: '8.500',
-        img: './images/hamburguesa.jpg',
+        img: ['./images/hamburguesa.jpg'],
         desc: `Deliciosa hamburguresa de pollo, como para chuparse\
                 los dedos. Viene con tocino, queso mozzarella, cebolla\
                 caramelizada, papitas fritas y salsa de la casa.`,
@@ -25,7 +29,7 @@ const menu = [
         title: 'alitas de pollo',
         category: 'comidas',
         price: '10.000',
-        img: './images/alitas.jpg',
+        img: ['./images/alitas.jpg'],
         desc: `Jugosas alitas de pollo con un sabor unico. Puede pedirlas\
                 de salsa barbacoa, salsa honey garlic, salsa buffalo, o \
                 normales.`,
@@ -44,7 +48,7 @@ const menu = [
         title: 'Brownie con helado de vainilla y glaseado',
         category: 'postres',
         price: '4.000',
-        img: './images/brownie.jpg',
+        img: ['./images/brownie.jpg'],
         desc: `Un riquisimo postre para matar el antojo,\
         disfrutalo sol@ o compartelo.`,
     },
@@ -53,7 +57,7 @@ const menu = [
         title: 'pancitos de queso',
         category: 'aperitivos',
         price: '4.000',
-        img: './images/pancitos.jpg',
+        img: ['./images/pancitos.jpg'],
         desc: `Pancitos de ajo cubiertos con queso mozzarella para alegrar\
         el estomago.`,
     },
@@ -62,12 +66,12 @@ const menu = [
         title: 'rollos de canela',
         category: 'aperitivos',
         price: '3.000',
-        img: './images/cynnamon_roles.jpg',
+        img: ['./images/cynnamon_roles.jpg'],
         desc: `Delicioso pan de canela. Frescos y calintitos a la entrega!`,
     },
     {
         id: 8,
-        title: 'kalimalteadas',
+        title: 'malteadas',
         category: 'kalimalteadas',
         price: '5.500',
         tipos: [

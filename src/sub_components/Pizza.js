@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 
-const Pizza = ({tipos, desc, img}) => {
+const Pizza = ({tipos, desc, img, title}) => {
 	const [index, setIndex] = useState(0)
     const [imgIndex, setImgIndex] = useState(0)
 	const {name, price} = tipos[index]
@@ -41,6 +41,7 @@ const Pizza = ({tipos, desc, img}) => {
 		<>
             <img src={img[imgIndex]} alt={name} className='photo'/>
             <div className="item-info">
+                <h4>{title}</h4>
                 <header>
                     <button
                         className="prev-btn"
