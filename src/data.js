@@ -65,7 +65,7 @@ const menu = [
         id: 7,
         title: 'rollos de canela',
         category: 'aperitivos',
-        price: '3.000',
+        price: '2.000',
         img: ['./images/cynnamon_roles.jpg'],
         desc: `Delicioso pan de canela. Frescos y calintitos a la entrega!`,
     },
