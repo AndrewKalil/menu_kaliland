@@ -150,7 +150,7 @@ const Menu = ({items}) => {
                             borderRadius: "5px"
                     }}>
                     <h4>Cantidad</h4>
-                    <h4>Nombre del producto</h4>
+                    <h4>producto</h4>
                     <h4>Precio</h4>
                 </div>
                 {list.map((listItem) => {
@@ -162,7 +162,7 @@ const Menu = ({items}) => {
                                 <p style={{marginRight: "4px", marginLeft: "4px"}}>{quantity}</p>
                                 <button onClick={() => addQuantity(id)}>+</button>
                             </div>
-                            <h4>{name}</h4>
+                            <h4 style={{textAlign:"center"}}>{name}</h4>
                             <h4>{Number(price * quantity).toFixed(3)}</h4>
                         </div>
                     )
