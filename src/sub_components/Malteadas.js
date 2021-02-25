@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import { FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 
-const Malteadas = ({tipos, desc, price, title}) => {
-	const [index, setIndex] = useState(0)
-	const {name, img} = tipos[index]
+const Malteadas = ({tipos, desc, price, title, addItem}) => {
+    const [index, setIndex] = useState(0)
+	const {name, img, id} = tipos[index]
+    const [quantity, setQuantity] = useState(0)
 
 	const checkNumber = (number) => {
 		if (number > tipos.length - 1) {
@@ -14,6 +15,14 @@ const Malteadas = ({tipos, desc, price, title}) => {
 		}
 		return number
 	}
+
+
+    const preventNegative = (number) => {
+        if (number < 0) {
+            return 0
+        }
+        return number
+    }
 
 	const nextItem = () => {
 		setIndex((index) => {
@@ -49,6 +58,18 @@ const Malteadas = ({tipos, desc, price, title}) => {
                     <h4 className='price'>{price}</h4>
                 </header>
                 <p className='item-text'>{desc}</p>
+            </div>
+            <div className='my-btn-container'>
+                <div className="add_subtract">
+                    <button onClick={() => setQuantity(preventNegative(quantity - 1))}>-</button>
+                    <p>{quantity}</p>
+                    <button onClick={() => setQuantity(quantity + 1)}>+</button>
+                </div>
+                <button
+                    onClick={() => addItem({name: name, quantity: quantity, id: id, price: price}, setQuantity)}
+                    className='add-to-cart-btn'>
+                        Añadir
+                </button>
             </div>
 		</>
 	)

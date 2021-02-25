@@ -1,18 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
-const Burrito = ({desc, img, title, price, addItem, id}) => {
-    const [imgIndex, setImgIndex] = useState(0)
+const Normal = ({desc, img, title, price, addItem, id}) => {
     const [quantity, setQuantity] = useState(0)
-
-	const checkNumber = (number, array) => {
-		if (number > array.length - 1) {
-			return 0
-		}
-		if (number < 0) {
-			return array.length -1
-		}
-		return number
-	}
 
     const preventNegative = (number) => {
         if (number < 0) {
@@ -21,16 +10,9 @@ const Burrito = ({desc, img, title, price, addItem, id}) => {
         return number
     }
 
-    useEffect(() => {
-		let slider = setInterval(() => {
-			setImgIndex(checkNumber(imgIndex + 1, img))
-		}, 3000)
-		return () => clearInterval(slider)
-	},[imgIndex, img])
-
 	return (
 		<>
-            <img src={img[imgIndex]} alt={title} className='photo'/>
+            <img src={img} alt={title} className='photo'/>
             <div className="item-info">
                 <header>
                     <h4>{title}</h4>
@@ -54,4 +36,4 @@ const Burrito = ({desc, img, title, price, addItem, id}) => {
 	)
 }
 
-export default Burrito
+export default Normal

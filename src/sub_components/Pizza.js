@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import { FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 
-const Pizza = ({tipos, desc, img, title}) => {
+const Pizza = ({tipos, desc, img, title, addItem}) => {
 	const [index, setIndex] = useState(0)
     const [imgIndex, setImgIndex] = useState(0)
-	const {name, price} = tipos[index]
+	const [quantity, setQuantity] = useState(0)
+    const {name, price, id} = tipos[index]
 
 	const checkNumber = (number, array) => {
 		if (number > array.length - 1) {
@@ -15,6 +16,13 @@ const Pizza = ({tipos, desc, img, title}) => {
 		}
 		return number
 	}
+
+    const preventNegative = (number) => {
+        if (number < 0) {
+            return 0
+        }
+        return number
+    }
 
     useEffect(() => {
 		let slider = setInterval(() => {
@@ -57,6 +65,18 @@ const Pizza = ({tipos, desc, img, title}) => {
                     <h4 className='price'>{price}</h4>
                 </header>
                 <p className='item-text'>{desc}</p>
+            </div>
+            <div className='my-btn-container'>
+                <div className="add_subtract">
+                    <button onClick={() => setQuantity(preventNegative(quantity - 1))}>-</button>
+                    <p>{quantity}</p>
+                    <button onClick={() => setQuantity(quantity + 1)}>+</button>
+                </div>
+                <button
+                    onClick={() => addItem({name: name, quantity: quantity, id: id, price: price}, setQuantity)}
+                    className='add-to-cart-btn'>
+                        Añadir
+                </button>
             </div>
 		</>
 	)
