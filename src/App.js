@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
@@ -29,7 +29,7 @@ function App() {
                 </div>
                 <Categories categories={categories}
                             filterItems={filterItems}/>
-                <Menu items={menuItems}/>
+				<Menu items={menuItems}/>
             </section>
             <Footer/>
         </main>

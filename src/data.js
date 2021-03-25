@@ -3,14 +3,14 @@ const menu = [
         id: 1,
         title: 'Burricaballo',
         category: 'comidas',
-        price: '8.000',
+        price: '9.000',
         img: [
             './images/burrito.jpg',
             './images/burrito_2.jpg',
             './images/burrito_3.jpg'
         ],
-        desc: `Enorme burrito que parece un caballo! Consiste de una\
-                tortilla de harina de trigo rellenada con codillo de cerdo, \
+        desc: `¡Enorme burrito que parece un caballo! Consiste de una\
+                tortilla de harina de trigo rellena con codillo de cerdo, \
                 chorizo, queso, pico de gallo, arroz con granos y\
                 salsa tartara.`,
     },
@@ -18,7 +18,7 @@ const menu = [
         id: 2,
         title: 'Hamburguesa de pollo',
         category: 'comidas',
-        price: '8.500',
+        price: '9.000',
         img: ['./images/hamburguesa.jpg'],
         desc: `Deliciosa hamburguresa de pollo, como para chuparse\
                 los dedos. Viene con tocino, queso mozzarella, cebolla\
@@ -43,15 +43,15 @@ const menu = [
     //     desc: `Una magnifica obra de arte; esta lasagna contiene carne molida, \
     //             chicharron, salsa bolagnesa hecha en casa, y queso mozzarella`,
     // },
-    {
-        id: 5,
-        title: 'Brownie con helado de vainilla y glaseado',
-        category: 'postres',
-        price: '4.000',
-        img: ['./images/brownie.jpg'],
-        desc: `Un riquisimo postre para matar el antojo,\
-        disfrutalo sol@ o compartelo.`,
-    },
+    // {
+    //     id: 5,
+    //     title: 'Brownie con helado de vainilla y glaseado',
+    //     category: 'postres',
+    //     price: '4.000',
+    //     img: ['./images/brownie.jpg'],
+    //     desc: `Un riquisimo postre para matar el antojo,\
+    //     disfrutalo sol@ o compartelo.`,
+    // },
     {
         id: 6,
         title: 'pancitos de queso',
@@ -117,6 +117,15 @@ const menu = [
                 adicionales: cualquier vegetal (1.000 COP), cualquier carne (2,000 COP),\
                 borde de queso (2.000 COP), borde de bocadillo (2.000 COP), picadillo de\
                 cilantro, cebollin y lechuga (1.000 COP).`
+    },
+	{
+        id: 13,
+        title: 'Taquitos',
+        category: 'comidas',
+        price: '8.000',
+        img: './images/tacos.jpg',
+        desc: `Deliciosos taquitos mexicanos rellenos con codillo de cerno desmenuzado con queso mozzarella.\
+				Viene con pico de gallo adicional y salsa especial.`,
     },
 
     ];

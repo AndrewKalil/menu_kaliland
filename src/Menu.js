@@ -5,8 +5,7 @@ import Burrito from './sub_components/Burrito'
 import Normal from  './sub_components/Normal'
 import Modal from 'react-modal'
 import {GrClose} from 'react-icons/gr'
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-// import {geolocated} from 'react-geolocated'
+
 
 Modal.setAppElement("#root")
 // const DEFAULT_LONG = -123

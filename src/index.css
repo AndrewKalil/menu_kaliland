@@ -391,3 +391,14 @@ Menu
     border-radius: 5px;
 }
 
+.readMoreBtn {
+	background-color: inherit;
+	border: none;
+	color: turquoise;
+	font-weight: 600;
+}
+
+.readMoreBtn:focus {
+	outline: none;
+}
+

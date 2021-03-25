@@ -6,6 +6,7 @@ const Pizza = ({tipos, desc, img, title, addItem}) => {
     const [imgIndex, setImgIndex] = useState(0)
 	const [quantity, setQuantity] = useState(0)
     const {name, price, id} = tipos[index]
+	const [readMore, setReadMore] = useState(false)
 
 	const checkNumber = (number, array) => {
 		if (number > array.length - 1) {
@@ -64,7 +65,14 @@ const Pizza = ({tipos, desc, img, title, addItem}) => {
                     </button>
                     <h4 className='price'>{price}</h4>
                 </header>
-                <p className='item-text'>{desc}</p>
+                {/* <p className='item-text'>{desc}</p> */}
+				<p className='item-text'>
+                    {readMore? `${desc} ` : `${desc.substring(0, 200)}... `}
+                    <button
+						className="readMoreBtn"
+                        onClick={() => setReadMore(!readMore)}
+                    >{readMore? "Leer menos" : "Leer mas"}</button>
+                </p>
             </div>
             <div className='my-btn-container'>
                 <div className="add_subtract">
