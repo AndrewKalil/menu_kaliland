@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
-import Menu from './Menu';
-import Categories from './Categories';
-import items from './data';
-import Footer from './Footer'
+import Menu from './main_components/Menu';
+import Categories from './main_components/Categories';
+import items from './data/data';
+import Footer from './main_components/Footer'
 // import {Footer} from 'bootstrap'
 
 const allCategories = ['todos', ...new Set(items.map((item) => item.category))]

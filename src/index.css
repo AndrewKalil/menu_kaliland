@@ -362,7 +362,10 @@ Menu
     height: 100%;
 }
 
-.summary-pedir-btn button:focus {
+.summary-pedir-btn button:focus,
+.add-to-cart-btn:focus,
+.add_subtract button:focus,
+.filter-btn:focus {
     outline: none;
 }
 
