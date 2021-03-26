@@ -1,6 +1,8 @@
 import React from 'react';
+import { useGlobalContext } from '../context_api/context'
 
-const Categories = ({filterItems, categories}) => {
+const Categories = () => {
+	const {filterItems, categories} = useGlobalContext()
     return (
         <div className="btn-container">
             {categories.map((category, index) => {

@@ -405,3 +405,9 @@ Menu
 	outline: none;
 }
 
+.logo {
+	justify-self: center;
+	height: 150px;
+	margin: auto;
+}
+

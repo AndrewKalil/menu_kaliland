@@ -1,35 +1,24 @@
-import React, { useState} from 'react';
-import Menu from './main_components/Menu';
+import React from 'react';
+import Products from './main_components/Menu';
 import Categories from './main_components/Categories';
-import items from './data/data';
 import Footer from './main_components/Footer'
-// import {Footer} from 'bootstrap'
+import logo from './images/Kalilandlogo.png'
 
-const allCategories = ['todos', ...new Set(items.map((item) => item.category))]
 
 function App() {
-    const [menuItems, setMenuItems] = useState(items)
-    const [categories] = useState(allCategories)
-
-    const filterItems = (category) => {
-        if (category === 'todos') {
-            setMenuItems(items)
-            return
-        }
-        const newItems = items.filter((item) => item.category === category)
-        setMenuItems(newItems)
-    }
 
     return (
         <main>
             <section className="menu section">
+				<div style={{display: "flex", alignItems: "center"}}>
+					<img className="logo" src={logo} alt="Kaliland"/>
+				</div>
                 <div className="title">
                     <h2>Nuestro Menu</h2>
                     <div className="underline"></div>
                 </div>
-                <Categories categories={categories}
-                            filterItems={filterItems}/>
-				<Menu items={menuItems}/>
+                <Categories/>
+				<Products/>
             </section>
             <Footer/>
         </main>

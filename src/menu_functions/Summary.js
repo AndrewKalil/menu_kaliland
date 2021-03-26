@@ -1,13 +1,13 @@
-import React, {useContext} from 'react'
+import React from 'react'
 
 //importing usecontext
-import { ItemContext } from "../main_components/Menu.js"
+import { useGlobalContext } from '../context_api/context'
 
-const Summary = ({list}) => {
-	const {subQuantity, addQuantity, setMessage, createMessage, message} = useContext(ItemContext)
+const Summary = () => {
+	const {subQuantity, addQuantity, setMessage, createMessage, message, cart} = useGlobalContext()
 	return (
 		<div>
-			{list.length > 0 && <div className="summary" style={list.length > 0 ? {border: "darkslategrey solid 2px"} : {}}>
+			{cart && cart.length > 0 && <div className="summary" style={cart.length > 0 ? {border: "darkslategrey solid 2px"} : {}}>
 				<div
 					className="summary-item"
 					style={{backgroundColor: "hsl(205, 86%, 81%)",
@@ -20,7 +20,7 @@ const Summary = ({list}) => {
 					<h4>producto</h4>
 					<h4>Precio</h4>
 				</div>
-				{list.map((listItem) => {
+				{cart.map((listItem) => {
 					const {quantity, name, price, id} = listItem
 					return (
 						<div key={id} className="summary-item">
@@ -36,9 +36,9 @@ const Summary = ({list}) => {
 				})}
 				<br/>
 				<div className="summary-item highlight-darkblue">
-					<h4>{list.reduce((totalQuantity, listItem) => totalQuantity + listItem.quantity, 0)}</h4>
+					<h4>{cart.reduce((totalQuantity, listItem) => totalQuantity + listItem.quantity, 0)}</h4>
 					<h4>Total</h4>
-					<h4>{Number(list.reduce((totalPrice, listItem) => totalPrice + parseFloat(listItem.price * listItem.quantity), 0)).toFixed(3)}</h4>
+					<h4>{Number(cart.reduce((totalPrice, listItem) => totalPrice + parseFloat(listItem.price * listItem.quantity), 0)).toFixed(3)}</h4>
 				</div>
 				<br/><br/>
 				<div className="summary-item">
