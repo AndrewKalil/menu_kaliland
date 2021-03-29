@@ -18,11 +18,34 @@ const menu = [
         id: 2,
         title: 'Hamburguesa de pollo',
         category: 'comidas',
-        price: '9.000',
-        img: './images/hamburguesa.jpg',
-        desc: `Deliciosa hamburguresa de pollo, como para chuparse\
-                los dedos. Viene con tocino, queso mozzarella, cebolla\
-                caramelizada, papitas fritas y salsa de la casa.`,
+		tipos: [
+            {
+				name: 'Hamburguesa de pollo',
+				price: "9.000",
+				img: './images/hamburguesa_pollo.jpg',
+				id: 2.1,
+				desc: `Deliciosa hamburguresa de pollo, como para chuparse\
+                		los dedos. Viene con tocino, queso mozzarella, cebolla\
+                		caramelizada, papitas fritas y salsa de la casa.`,
+			},
+            {
+				name: 'Choriburger sencilla',
+				price: "10.000",
+				img: './images/choriburger.JPG',
+				id: 2.2,
+				desc: `Deliciosa hamburguresa de carne de res y chorizo. Viene\
+						con cebolla caramelizada con trocitos de tocino, lechuga,\
+						tomate, queso chedar, y la salsa especial de la casa.`,
+			},
+			{
+				name: 'Choriburger doble',
+				price: "13.000",
+				img: './images/choriburger.JPG',
+				id: 2.3,
+				desc: `¡Duplica el tamaño y sabor de tu choriburger! Doble carne y doble\
+						queso por solo 3.000 COP adicionales.`,
+			},
+        ],
     },
     {
         id: 3,

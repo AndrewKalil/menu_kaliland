@@ -10,6 +10,10 @@ const Product = ({desc, img, title, price, id, tipos}) => {
 	const [passIdx, setPassIdx] = useState(0)
 	const [readMore, setReadMore] = useState(false)
 
+	const description = (tipos && tipos[productIdx].desc !== "undefined" && tipos[productIdx].desc) || desc
+
+	// console.log(id, description);
+
     const preventNegative = (number) => {
         if (number < 0) {
             return 0
@@ -83,8 +87,8 @@ const Product = ({desc, img, title, price, id, tipos}) => {
                     <h4 className='price'>{price || tipos[productIdx].price}</h4>
                 </header>
                 <p className='item-text'>
-                    {readMore? `${desc} ` : `${desc.substring(0, 200)} `}
-                    {desc.length > 200 && <button
+                    {readMore? `${description} ` : `${description.substring(0, 200)} `}
+                    {description.length > 200 && <button
 						className="readMoreBtn"
                         onClick={() => setReadMore(!readMore)}
                     >{readMore? "...Leer menos" : "...Leer mas"}</button>}
