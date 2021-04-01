@@ -76,14 +76,14 @@ const Product = ({desc, img, title, price, id, tipos}) => {
 							onClick={prevItem}>
 							<FaChevronLeft/>
 						</button>
-						<h5>{tipos[productIdx].name}</h5>
+						<h6>{tipos[productIdx].name}</h6>
 						<button
 							className="next-btn"
 							onClick={nextItem}>
 							<FaChevronRight/>
 						</button>
 					</div> :
-                    <h5>{title}</h5>}
+                    <h6>{title}</h6>}
                     <h6 className='price'>{price || tipos[productIdx].price}</h6>
                 </header>
                 <p className='item-text'>

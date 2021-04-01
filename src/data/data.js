@@ -49,7 +49,7 @@ const menu = [
     },
     {
         id: 3,
-        title: 'alitas de pollo',
+        title: 'Alitas de pollo',
         category: 'comidas',
         price: '10.000',
         img: './images/alitas.jpg',
@@ -77,7 +77,7 @@ const menu = [
     // },
     {
         id: 6,
-        title: 'pancitos de queso',
+        title: 'Pancitos de queso',
         category: 'aperitivos',
         price: '4.000',
         img: './images/pancitos.jpg',
@@ -86,7 +86,7 @@ const menu = [
     },
     {
         id: 7,
-        title: 'rollos de canela',
+        title: 'Rollos de canela',
         category: 'aperitivos',
         price: '2.000',
         img: './images/cynnamon_roles.jpg',
@@ -98,17 +98,17 @@ const menu = [
         category: 'kalimalteadas',
         price: '5.500',
         tipos: [
-            {name: 'frutos rojos', img: './images/malteada-frutos-rojos.jpeg', id: 8.1},
-            {name: 'guanabana', img: './images/malteada-guanabana.jpg', id: 8.2},
-            {name: 'cafe con arequipe', img: './images/malteada-cafe.jpg', id: 8.3},
-            {name: 'chocolate', img: './images/malteada-chocolate.jpg', id: 8.4},
+            {name: 'Frutos rojos', img: './images/malteada-frutos-rojos.jpeg', id: 8.1},
+            {name: 'Guanabana', img: './images/malteada-guanabana.jpg', id: 8.2},
+            {name: 'Cafe con arequipe', img: './images/malteada-cafe.jpg', id: 8.3},
+            {name: 'Chocolate', img: './images/malteada-chocolate.jpg', id: 8.4},
         ]
         ,
         desc: `Deleitable malteada para matar el antojo y alegrar el alma.`,
     },
     {
         id: 12,
-        title: 'pizza',
+        title: 'Pizza',
         category: 'comidas',
         img: [
             './images/pizza_jamon_pollo_pina.jpg',
