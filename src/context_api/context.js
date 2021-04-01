@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect} from 'react'
 import items from '../data/data'
 
 const AppContext = React.createContext()
@@ -15,17 +15,27 @@ const getData = (keyName) => {
 	return []
 }
 
+
 const AppProvider = ({children}) => {
-	// state values
 	const [products, setProducts] = useState(items)
 	const [categories] = useState(allCategories)
+	const [modalIsOpen, setModalIsOpen] = useState(false)
 	const [cart, setCart] = useState(getData("cart"))
 	const [message, setMessage] = useState("")
+	const [total, setTotal] = useState(0)
+	const [amount, setAmount] = useState(0)
 
 	// clear cart in localstorage
 	useEffect(() => {
-		let quantity = cart.reduce((totalQuantity, listItem) => totalQuantity + listItem.quantity, 0)
-		if (quantity <= 0) {
+		let quantity = Number(cart.reduce((totalQuantity, listItem) => totalQuantity + listItem.quantity, 0))
+		let total = Number(cart.reduce((totalPrice, listItem) => totalPrice + parseFloat(listItem.price * listItem.quantity), 0)).toFixed(3)
+		if (quantity !== 0) {
+			setAmount(quantity)
+			setTotal(total)
+		}
+		else {
+			setAmount(0)
+			setTotal(0)
 			removeData("cart")
 		}
 	}, [cart])
@@ -39,6 +49,14 @@ const AppProvider = ({children}) => {
         const newItems = items.filter((item) => item.category === category)
         setProducts(newItems)
     }
+
+	const openModal = () => {
+		setModalIsOpen(true)
+	}
+
+	const closeModal = () => {
+		setModalIsOpen(false)
+	}
 
 	// create a predifined message for whatsapp
 	const createMessage = () => {
@@ -114,7 +132,7 @@ const AppProvider = ({children}) => {
         }
     }
 
-	//save cart to localstorage
+	// save cart to localstorage
 	const saveData = (keyName, data) => {
 		if (data) {
 			window.localStorage.setItem(keyName, JSON.stringify(data))
@@ -131,6 +149,9 @@ const AppProvider = ({children}) => {
 				products,
 				categories,
 				filterItems,
+				modalIsOpen,
+				openModal,
+				closeModal,
 				cart,
 				createMessage,
 				subQuantity,
@@ -138,7 +159,9 @@ const AppProvider = ({children}) => {
 				addItem,
 				message,
 				setMessage,
-				saveData
+				saveData,
+				amount,
+				total
 			}}>
 			{children}
 		</AppContext.Provider>)

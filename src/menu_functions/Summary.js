@@ -4,7 +4,7 @@ import React from 'react'
 import { useGlobalContext } from '../context_api/context'
 
 const Summary = () => {
-	const {subQuantity, addQuantity, setMessage, createMessage, message, cart} = useGlobalContext()
+	const {subQuantity, addQuantity, setMessage, createMessage, message, cart, amount, total} = useGlobalContext()
 	return (
 		<div>
 			{cart && cart.length > 0 && <div className="summary" style={cart.length > 0 ? {border: "darkslategrey solid 2px"} : {}}>
@@ -14,11 +14,12 @@ const Summary = () => {
 							height: "30px",
 							paddingTop: "6px",
 							marginBottom: "5px",
-							borderRadius: "5px"
+							borderRadius: "5px",
+							alignContent: "center"
 					}}>
-					<h4>Cantidad</h4>
-					<h4>producto</h4>
-					<h4>Precio</h4>
+					<h5>Cantidad</h5>
+					<h5>producto</h5>
+					<h5>Precio</h5>
 				</div>
 				{cart.map((listItem) => {
 					const {quantity, name, price, id} = listItem
@@ -29,16 +30,16 @@ const Summary = () => {
 								<p style={{marginRight: "4px", marginLeft: "4px"}}>{quantity}</p>
 								<button onClick={() => addQuantity(id)}>+</button>
 							</div>
-							<h4 style={{textAlign:"center"}}>{name}</h4>
-							<h4>{Number(price * quantity).toFixed(3)}</h4>
+							<h6 style={{textAlign:"center"}}>{name}</h6>
+							<h6>{Number(price * quantity).toFixed(3)}</h6>
 						</div>
 					)
 				})}
 				<br/>
 				<div className="summary-item highlight-darkblue">
-					<h4>{cart.reduce((totalQuantity, listItem) => totalQuantity + listItem.quantity, 0)}</h4>
-					<h4>Total</h4>
-					<h4>{Number(cart.reduce((totalPrice, listItem) => totalPrice + parseFloat(listItem.price * listItem.quantity), 0)).toFixed(3)}</h4>
+					<h6>{amount}</h6>
+					<h6>Total</h6>
+					<h6>{total}</h6>
 				</div>
 				<br/><br/>
 				<div className="summary-item">

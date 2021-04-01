@@ -1,18 +1,16 @@
 import React from 'react';
-import Products from './main_components/Menu';
+import Navbar from './main_components/Navbar'
 import Categories from './main_components/Categories';
+import Products from './main_components/Menu';
 import Footer from './main_components/Footer'
-import logo from './images/Kalilandlogo.png'
-
+import './App.scss';
 
 function App() {
 
     return (
         <main>
+			<Navbar/>
             <section className="menu section">
-				<div style={{display: "flex", alignItems: "center"}}>
-					<img className="logo" src={logo} alt="Kaliland"/>
-				</div>
                 <div className="title">
                     <h2>Nuestro Menu</h2>
                     <div className="underline"></div>
